@@ -16,7 +16,7 @@ public class Test {
         //遍历字符串
         for (int i = 0; i < a; i++) {
             char s2=s1.charAt(i);
-            System.out.println(s2);
+            System.out.print(s2+" ");
         }
 
     }
