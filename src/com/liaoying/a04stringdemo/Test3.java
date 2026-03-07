@@ -8,8 +8,10 @@ public class Test3 {
 
         //创建数组
         int[] arr={1,2,3};
+        String s=ArrayUtil.arrayToString(arr);
+        System.out.println(s);
 
-        //定义字符串
+        /*//定义字符串
         String str="";//字符串中内容未知时可先定义一个空字符串
 
         //给字符串赋值
@@ -23,6 +25,6 @@ public class Test3 {
                 str=str+arr[i]+"]";
             }
         }
-        System.out.println(str);
+        System.out.println(str);*/
     }
 }
