@@ -1,5 +1,6 @@
 package com.liaoying.a05stringdemo;
 
+import javax.print.DocFlavor;
 import java.util.Scanner;
 
 public class Test1 {
@@ -14,11 +15,19 @@ public class Test1 {
         System.out.println("请输入用户名:");
         Scanner sc=new Scanner(System.in);
         String username=sc.next();
+
         //截取
+        //1、substring
         String str=username.substring(0,1);
+        //2、charAt
+        char first=username.charAt(0);
+
         //拼接
         str=str+"***";
-        System.out.println(str);
+        System.out.println("str:"+str);
+
+        String str2=first+"***";
+        System.out.println("str2:"+str2);
 
         /*String str2=username.substring(2);
         System.out.println(str2);*/
