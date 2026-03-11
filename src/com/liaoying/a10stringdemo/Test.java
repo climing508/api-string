@@ -3,8 +3,8 @@ package com.liaoying.a10stringdemo;
 public class Test {
     public static void main(String[] args) {
         /*定义两个字符串，记录为非负整数，求他们的和*/
-        String str1 = "12395";
-        String str2 = "133";
+        String str1 = "999";
+        String str2 = "999";
         //判断str1和str2的长度，并将最长的长度赋值给len
         int len=str1.length()>=str2.length()?str1.length():str2.length();
         //创建两个数组存放字符串中的数据
@@ -23,14 +23,12 @@ public class Test {
         int[] sum=new int[len+1];//定义和数组
         //两数组相加，进位
         for (int i = arr1.length - 1; i >= 0; i--) {
-            if(arr1[i]+arr2[i]>9){
-                sum[i+1]=sum[i+1]+arr1[i]+arr2[i]-10;
-                num=1;
-                sum[i]=sum[i]+num;
-            }else{
-                sum[i+1]=sum[i+1]+arr1[i]+arr2[i];
-            }
+                int temp=(arr1[i]+arr2[i])+num;
+                sum[i+1]=temp%10;
+                num=temp/10;
         }
+        //结束循环之后，sum的0索引还没有遍历到，所以直接将进位赋值给0索引位置
+        sum[0]=num;
         //输出和
         for (int i = 0; i < sum.length; i++) {
             System.out.print(sum[i]);
