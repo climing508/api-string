@@ -7,6 +7,7 @@ public class Test {
         String str2 = "133";
         //判断str1和str2的长度，并将最长的长度赋值给len
         int len=str1.length()>=str2.length()?str1.length():str2.length();
+        //创建两个数组存放字符串中的数据
         int[] arr1=sumString(str1,len);
         int[] arr2=sumString(str2,len);
         //输出arr1和arr2
