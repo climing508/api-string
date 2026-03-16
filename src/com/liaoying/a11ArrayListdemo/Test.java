@@ -27,6 +27,7 @@ public class Test {
         //查
         al.get(1);
         String s;
+        //遍历
         for (int i = 0; i < al.size(); i++) {
             s = al.get(i);
             System.out.println(s);
